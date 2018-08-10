@@ -29,7 +29,7 @@ async function fetchmovies(){
 			spinner.stop();
 			printContent(json);
 		} else {
-			json = await response.json();
+			const json = await response.json();
 			spinner.stop();
 			console.log(`title: ${json.errors.title}
               detail: ${json.errors.detail}`);
