@@ -7,9 +7,6 @@ module.exports = {
     "parserOptions": {
         "ecmaVersion": 2018
     },
-    "globals": {
-        "json": true
-    },
     "rules": {
         "no-console": 0,
         "indent": [
