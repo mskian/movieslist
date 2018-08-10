@@ -2,6 +2,10 @@
 
 <p>Movie Watchlist 🗒 from - <code>themoviedb.org</code></p>
 
+<p align=center>
+<img src="https://raw.githubusercontent.com/mskian/movieslist/master/san-mvdbwatchlist.gif">
+</p>
+
 ## Requirements
 
 - `themoviedb.org` Account & API
