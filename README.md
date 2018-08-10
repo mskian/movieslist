@@ -1,6 +1,6 @@
-# Movie List
+# MoviesList
 
-<p>My Movie Watch List from <code>themoviedb.org</code></p>
+<p>Movie Watchlist 🗒 from - <code>themoviedb.org</code></p>
 
 ## Requirements
 
@@ -15,7 +15,7 @@
 - Authorize the Request token to your Moviesdb account - `https://www.themoviedb.org/authenticate/{REQUEST_TOKEN}`
 - Now Create Session ID - `https://developers.themoviedb.org/3/authentication/create-session`
 
-## Install
+## Installation
 
 - Install via GIT
 
@@ -27,6 +27,8 @@ touch .env
 ```
 
 - Add your themoviedb website watchlist API URL in `.env` File
+
+File - `.env`
 
 ```
 MOVIES_DB_API_URL=https://api.themoviedb.org/3/account/<USERNAME>/watchlist/movies?api_key=<YOUR API KEY>&language=en-US&session_id=<YOUR SESSION ID>
