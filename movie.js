@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+'use strict';
 
 const ora = require('ora');
 const fetch = require('node-fetch');
@@ -8,6 +8,7 @@ const config = require('./config');
 const { urls: { watchlist } } = config;
 
 async function fetchmovies(){
+
 	const spinner = new ora({
 		text: 'Fetching My Movie Watchlist',
 		spinner: 'hamburger'
@@ -20,16 +21,15 @@ async function fetchmovies(){
 		spinner.text = 'Your Watchlist From themoviedb.org';
 	}, 1000);
 
-  
 	try {
 		await new Promise(resolve => setTimeout(resolve, 1000));
-		res = await fetch(watchlist);
-		if (res.ok) {
-			json = await res.json();
+		const response = await fetch(watchlist);
+		if (response.ok) {
+			const json = await response.json();
 			spinner.stop();
 			printContent(json);
 		} else {
-			json = await res.json();
+			json = await response.json();
 			spinner.stop();
 			console.log(`title: ${json.errors.title}
               detail: ${json.errors.detail}`);

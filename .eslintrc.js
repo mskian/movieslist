@@ -8,7 +8,6 @@ module.exports = {
         "ecmaVersion": 2018
     },
     "globals": {
-        "res": true,
         "json": true
     },
     "rules": {
