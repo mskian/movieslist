@@ -1,6 +1,8 @@
 # MoviesList
 
-<p>Movie Watchlist 🗒 from - <code>themoviedb.org</code></p>
+[![dependencies Status](https://david-dm.org/mskian/movieslist/status.svg)](https://david-dm.org/mskian/movieslist)
+
+<p>Movie Watchlist 🗒 from - <code>themoviedb.org</code></p><br>
 
 <p align=center>
 <img src="https://raw.githubusercontent.com/mskian/movieslist/master/san-mvdbwatchlist.gif">
