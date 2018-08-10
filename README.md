@@ -26,7 +26,7 @@ npm install
 touch .env
 ```
 
-- `.env` Add your themoviedb website watchlist API URL
+- Add your themoviedb website watchlist API URL in `.env` File
 
 ```
 MOVIES_DB_API_URL=https://api.themoviedb.org/3/account/<USERNAME>/watchlist/movies?api_key=<YOUR API KEY>&language=en-US&session_id=<YOUR SESSION ID>
