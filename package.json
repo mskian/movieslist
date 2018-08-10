@@ -1,0 +1,32 @@
+{
+  "name": "movieslist",
+  "version": "1.0.0",
+  "description": "Movies Watchlist",
+  "main": "movie.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mskian/movieslist.git"
+  },
+  "keywords": [
+    "movies",
+    "watchlist"
+  ],
+  "author": "Santhosh Veer",
+  "license": "MIT",
+  "engines": {
+    "node": "^6.9.0 || ^8.9.0"
+  },
+  "bugs": {
+    "url": "https://github.com/mskian/movieslist/issues"
+  },
+  "homepage": "https://github.com/mskian/movieslist/issues#readme",
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "dotenv": "^6.0.0",
+    "node-fetch": "^2.2.0",
+    "ora": "^3.0.0"
+  }
+}
