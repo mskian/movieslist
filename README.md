@@ -11,7 +11,7 @@
 ## Requirements
 
 - `themoviedb.org` Account & API
-- Node.JS 6 or 8x to run this CLI
+- Node.JS 8x to run this CLI
 - GIT to clone this Respo
 
 ## Get API KEY & SESSION ID
