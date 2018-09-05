@@ -1,6 +1,6 @@
 {
   "name": "movieslist",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Movies Watchlist",
   "main": "movie.js",
   "scripts": {
@@ -17,7 +17,7 @@
   "author": "Santhosh Veer",
   "license": "MIT",
   "engines": {
-    "node": "^6.9.0 || ^8.9.0"
+    "node": "^8.9.0"
   },
   "bugs": {
     "url": "https://github.com/mskian/movieslist/issues"
