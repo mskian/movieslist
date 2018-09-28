@@ -2,7 +2,7 @@
 
 const ora = require('ora');
 const fetch = require('node-fetch');
-const Table = require('cli-table');
+const Table = require('cli-table3');
 const config = require('./config');
 
 const { urls: { watchlist } } = config;
