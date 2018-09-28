@@ -7,7 +7,7 @@ const config = require('./config');
 
 const { urls: { watchlist } } = config;
 
-async function fetchmovies(){
+async function fetchmovies() {
 
 	const spinner = new ora({
 		text: 'Fetching My Movie Watchlist',
@@ -22,48 +22,34 @@ async function fetchmovies(){
 	}, 1000);
 
 	try {
-		await new Promise(resolve => setTimeout(resolve, 1000));
+		await new Promise(resolve => setTimeout(resolve, 2000));
 		const response = await fetch(watchlist);
-		if (response.ok) {
-			const json = await response.json();
-			spinner.stop();
-			printContent(json);
-		} else {
-			const json = await response.json();
-			spinner.stop();
-			console.log(`title: ${json.errors.title}
-              detail: ${json.errors.detail}`);
-		}
-	} catch (err) {
-		spinner.stop();
+		var watchlst = await response.json();
+		const group = watchlst.results.map(g => [
+			g.id,
+			g.title,
+			g.release_date
+		]);
   
-		console.error(err);
+		const table = new Table({
+			chars: { 'top': '═' , 'top-mid': '╤' , 'top-left': '╔' , 'top-right': '╗'
+				, 'bottom': '═' , 'bottom-mid': '╧' , 'bottom-left': '╚' , 'bottom-right': '╝'
+				, 'left': '║' , 'left-mid': '╟' , 'mid': '─' , 'mid-mid': '┼'
+				, 'right': '║' , 'right-mid': '╢' , 'middle': '│' },
+			style: {head: ['green']},
+			head: ['ID', 'Movie', 'Release Date'],
+			colWidths: [10, 45, 20]
+		});
+
+		table.push(...group);
+		spinner.stop();
+		console.log('\n');
+		console.log(table.toString());
+		console.log('\n');
+
+	} catch (exception) {
+		spinner.stop();
+		console.error(`Failed to retrieve your Watchlist informations: (${exception})`);
 	}
 }
-
 fetchmovies();
-
-const printContent = json => {
-	console.log();
-  
-	const group = json.results.map(g => [
-		g.id,
-		g.title,
-		g.release_date
-	]);
-  
-	const table = new Table({
-		chars: { 'top': '═' , 'top-mid': '╤' , 'top-left': '╔' , 'top-right': '╗'
-			, 'bottom': '═' , 'bottom-mid': '╧' , 'bottom-left': '╚' , 'bottom-right': '╝'
-			, 'left': '║' , 'left-mid': '╟' , 'mid': '─' , 'mid-mid': '┼'
-			, 'right': '║' , 'right-mid': '╢' , 'middle': '│' },
-		style: {head: ['green']},
-		head: ['ID', 'Movie', 'Release Date'],
-		colWidths: [10, 45, 20]
-	});
-
-	table.push(...group);
-	console.log('\n');
-	console.log(table.toString());
-	console.log('\n');
-};
