@@ -4,7 +4,7 @@
 
 <p>Movie Watchlist 🗒 from - <code>themoviedb.org</code></p><br>
 
-<p align=center>
+<p align="center">
 <img src="https://raw.githubusercontent.com/mskian/movieslist/master/san-mvdbwatchlist.gif">
 </p>
 
@@ -16,7 +16,7 @@
 
 ## Get API KEY & SESSION ID
 
-- Open Free Account From `https://www.themoviedb.org/faq/api`
+- Open a Free Account From themoviesdb & Create API Key - `https://www.themoviedb.org/faq/api`
 - After creating API KEY Create an Authentication/Request Token to Create a Session ID - `https://developers.themoviedb.org/3/authentication/create-request-token` (Note a Create a REQUEST Token Copy the Token)
 - Authorize the Request token to your Moviesdb account - `https://www.themoviedb.org/authenticate/{REQUEST_TOKEN}`
 - Now Create Session ID - `https://developers.themoviedb.org/3/authentication/create-session`
