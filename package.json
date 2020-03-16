@@ -25,8 +25,8 @@
   "homepage": "https://github.com/mskian/movieslist/#readme",
   "dependencies": {
     "cli-table3": "^0.5.1",
-    "dotenv": "^6.0.0",
-    "node-fetch": "^2.2.0",
-    "ora": "^3.0.0"
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.0",
+    "ora": "^4.0.3"
   }
 }
